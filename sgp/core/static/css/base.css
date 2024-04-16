@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "Ubuntu";
+    src: url("../assets/UbuntuCondensed-Regular.ttf") format("truetype");
+}
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.text-verde{
+    color: #1f6926;
+}
+.text-azul{
+    color: #2b3771;
+}
+
+.bg-verde{
+    background-color: #1f6926;
+}
+
+@media screen and (max-width: 575px) {
+    #logo{
+        /*display:none;*/
+        max-width: 10%;
+    }
+}

@@ -1,0 +1,52 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block content %}
+
+{% for t in tratamiento %}
+<div class="card-group">
+    <div class="card bg-negro">
+        <div class="card-header bg-dark text-white">
+            <h4>
+                <i class="fab fa-battle-net text-success"></i>&nbsp;
+                Tratamiento de: 
+                <span class="text-primary">
+                    {{t.paciente.nombre}} {{t.paciente.apellido}} 
+                </span>
+            </h4>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-3">
+    <p class="lead text-justify text-right"><small>Fecha: {{t.created}}</small></p>    
+    <p class="lead"><h3 class="text-verde text-justify">{{t.nombre}}</h3></p>
+    <p class="lead text-justify">Pieza/s: {{t.pieza}}</p>
+    <p class="lead text-justify">{{t.descripcion}}</p>
+    
+
+    {% if radiografias%}
+    <div class="row row-cols-1 row-cols-md-4">
+        {% for r in radiografias %}            
+            <div class="col mb-4">
+                <div class="card h-100 text-center py-1">
+                    <a href="{{r.imagen.url}}" data-toggle="lightbox">            
+                        <img src="{{r.imagen.url}}" class="p-3 img-fluid">                       
+                    </a>           
+                </div>
+            </div>            
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <p> 
+        <button type="button" onclick="history.back()" class="btn btn-secondary">
+            <i class="fas fa-backward"></i>&nbsp;&nbsp;Volver
+        </button>
+    </p>
+</div>
+{% endfor %}
+<br>
+
+{% endblock %} 

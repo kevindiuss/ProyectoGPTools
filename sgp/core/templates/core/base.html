@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap 4.6 -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap/bootstrap.min.css' %}">
+        <!-- FontAwesome-->
+        <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+        <!-- Sweetalert 2 -->
+        <link rel="stylesheet" href="{% static 'css/sweetalert_dark.css' %}">
+        <!-- Estilo Base -->
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% block css%}
+        {% endblock %}
+
+        {% block jsHead %}
+        {% endblock %}
+
+        <title>Suplimed SGP</title>
+    </head>
+    <body>
+
+        <!-- Barra NAV Superior-->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+            <a href="{% url 'core:index' %}" class="nav-link">
+                <img src="{% static 'img/logo2.png' %}" class="img-fluid" style="width: 100%;" id="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item dropdown mr-3" >
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user text-white"></i>&nbsp;
+                            @{{ user.first_name }} {{ user.last_name}}
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="{% url 'logout' %}" class="dropdown-item">
+                                <i class="fa fa-user-times"></i>&nbsp;&nbsp;Salir
+                            </a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="nav-link mr-5">
+                            <i class="fa fa-user text-white"></i>&nbsp;&nbsp;Login                            
+                        </a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+        <!-- FIN Barra NAV Superior-->
+
+        <!-- Menu lado izquierdo -->
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Menu lateral de 3 columnas-->
+                <div class="col-sm-12 col-md-3">                    
+                    <div class="card">
+                        <div class="card-header bg-dark text-white">
+                            <h4><i class="fa fa-align-justify"></i>&nbsp;&nbsp;Men&uacute; Principal</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">
+                                <li class="list-group-item list-group-item-secondary d-fle align-items-center">
+                                    <i class="fas fa-home"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'core:index' %}" class="text-dark">
+                                        Inicio
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-secondary d-flex align-items-center">
+                                    <i class="fas fa-users"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'paciente:listar' %}" class="text-dark">
+                                        Pacientes
+                                    </a>
+                                </li>
+                                {% if user.is_authenticated %}
+                                <li class="list-group-item list-group-item-secondary d-flex align-items-center">
+                                    <i class="fas fa-user"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'paciente:paciente_registro' %}" class="text-dark">
+                                        Registrar Paciente
+                                    </a>
+                                </li>
+                                {% endif %}
+                                <li class="list-group-item list-group-item-secondary d-flex align-items-center">
+                                    <i class="fas fa-file"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'tratamiento:listar_tratamientos' %}" class="text-dark">
+                                        Tratamientos
+                                    </a>
+                                </li>
+                                {% if user.is_authenticated %}
+                                <li class="list-group-item list-group-item-secondary d-flex align-items-center">
+                                    <i class="fas fa-pen"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'tratamiento:registrar_tratamiento' %}" class="text-dark">
+                                        Registrar tratamiento
+                                    </a>
+                                </li>
+                                <li class="list-group-item list-group-item-secondary d-flex align-items-center">
+                                    <i class="fas fa-image"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'tratamiento:guardar_radiografia_tratamiento' %}" class="text-dark">
+                                        Guardar radiograf&iacute;as de un tratamiento
+                                    </a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class="card-header bg-dark text-white">
+                            <h4><i class="fas fa-info-circle"></i>&nbsp;&nbsp;Informaci&oacute;n</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group">                                
+                                <li class="list-group-item list-group-item-secondary d-flex align-items-center">
+                                    <i class="far fa-calendar-alt"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'agenda:mostrar' %}" class="text-dark">Agenda</a>
+                                </li>
+                                <li class="list-group-item list-group-item-secondary d-flex align-items-center">
+                                    <i class="fas fa-dollar-sign"></i>&nbsp;&nbsp;&nbsp;
+                                    <a href="{% url 'presupuesto:listar_presupuestos' %}" class="text-dark">Presupuestos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN Menu lado izquierdo -->
+
+                <!-- Contenido del lado derecho -->
+                    <div class="col-sm-12 col-md-9">
+                        {% block content%}
+                        
+                        {% endblock %}                
+                    </div>
+                <!-- FIN Contenido del lado derecho -->
+
+            </div>
+        </div>       
+        
+        <!-- Footer -->        
+        <footer class="bg-dark text-white mt-5 p-1">
+            <div class="container p-3">
+                <div class="row text-center">
+                    <div class="col ml-auto">
+                        <p class="lead text-center">                            
+                            <i class="fas fa-rocket"></i>&nbsp;&nbsp;
+                            Kevin Diuss Desarrollo, 2024 &copy;                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- FIN Footer -->
+
+
+        <!-- Jquery 3.6 -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        <!-- Popper JS -->
+        <script src="{% static 'js/popper.min.js' %}"></script>
+        <!-- Bootstrap JS -->
+        <script src="{% static 'js/bootstrap/bootstrap.min.js' %}"></script>
+        <!-- SweetAlert 2 JS -->
+        <script src="{% static 'js/sweetalert2.min.js' %}"></script>
+        <!-- Libreria Lightbox -->
+        <script src="{% static 'js/ekko-lightbox.min.js' %}"></script>
+
+        <script>
+            //Para uso de la libreria de Lightbox
+            $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+        </script>
+
+        {% if messages %}
+        {% for m in messages %}
+            <script>
+                Swal.fire({
+                    "title":"Atención, ",
+                    "text":"{{m}}",
+                    "icon":"success"
+                })
+            </script>
+        {% endfor%}
+        {% endif %}
+
+        {% block js%}
+        {% endblock %}        
+        
+    </body>
+</html>

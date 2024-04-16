@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row">
+    <div class="card-body">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page">
+                    Paciente:&nbsp;&nbsp; <span class="text-verde">{{form.nombre.value}} {{form.apellido.value}}</span>
+                </li>
+            </ol>
+        </nav>
+    </div>
+</div>
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form|crispy}}
+    <br>
+    <div class="form-group">
+        <button type="submit" class="btn btn-success">
+            <i class="fas fa-save"></i>&nbsp;Actualizar
+        </button>
+        &nbsp;
+        <button type="button" onclick="history.back()" class="btn btn-warning">
+            <i class="fas fa-backward"></i>&nbsp;Cancelar
+        </button>
+    </div>
+    <br>
+</form>
+
+{{mensaje}}
+
+{% endblock %}

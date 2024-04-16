@@ -1,0 +1,56 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block css%}
+{% endblock %}
+
+{% block content %}
+<div class="card-group">
+    <div class="card bg-negro">
+        <div class="card-header bg-dark text-white">
+            <h4><i class="fab fa-battle-net text-verde"></i>&nbsp;Iniciar Sesi&oacute;n</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt-5">   
+    <div class="row">
+        <div class="card bg-dark m-auto text-white">            
+            <div class="card-body">
+                <h2 class="text-naranja">&nbsp;Ingresar credenciales&nbsp;</h2>
+                <hr class="bg-verde">
+                                
+                <form action="" method="POST">
+                    {% csrf_token %}
+
+                    {% if form.non_field_errors %}
+                        <p class="alert alert-success">
+                            Usuario o contrase&ntilde;a incorrecta.
+                        </p>
+                    {% endif %}
+                    
+                    
+                    <div class="form-group">
+                        <label>Usuario</label>
+                        <input type="text" name="username" class="form-control" id="id_username">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contrase&ntilde;a</label>
+                        <input type="password" name="password" class="form-control" id="id_password">
+                    </div>
+                    
+                    <small>
+                        <a href="{% url 'password_reset' %}" class="text-white">Recuperar contrase&ntilde;a</a>
+                    </small>
+                    <br>
+                    <button type="submit" class="btn btn-primary float-right">
+                        <i class="fas fa-sign-in-alt"></i>&nbsp;Ingresar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}

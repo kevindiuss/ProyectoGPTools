@@ -1,0 +1,115 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block css%}
+<style>
+    .buscar{
+        color: #FFF;
+        font-size: smaller;
+        float: right;
+    }
+    .buscar a{
+        color: #FFF !important;
+        text-decoration: none;
+    }
+    .buscar a:hover{
+        text-decoration: none;
+        color: green !important;        
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="card-group">
+    <div class="card bg-negro">
+        <div class="card-header bg-dark text-white">
+            <h4>
+                <i class="fab fa-battle-net text-success"></i>&nbsp;Listado de Pacientes
+                <span class="buscar">
+                    <a href="#" id="buscar">
+                        <small>
+                            <i class="fa fa-search"></i>&nbsp;Buscar
+                        </small>
+                    </a>
+                </span>
+            </h4>
+        </div>
+    </div>
+</div>
+{% if pacientes %}
+<div class="table-responsive">
+    <table id="tabla" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Tipo Id</th>
+                <th scope="col">Numero Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Tel&eacute;fono</th>
+                <th scope="col">Email</th>
+                <th scope="col">Fecha de nacimiento</th>
+                <th scope="col">Direcci&oacute;n</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Ocupaci&oacute;n</th>
+                <th scope="col">Actualizaci&oacute;n</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for p in pacientes %}
+            <tr>
+                <td scope="row">{{ p.tipoId }}</td>
+                <td scope="row">{{ p.numDocumento }}</td>
+                <td scope="row">{{ p.nombre }}</td>
+                <td scope="row">{{ p.apellido }}</td>
+                <td scope="row">{{ p.telefono }}</td>
+                <td scope="row">{{ p.email }}</td>    
+                <td scope="row">{{ p.fecha_nacimiento }}</td>    
+                <td scope="row">{{ p.direccion }}</td>    
+                <td scope="row">{{ p.sexo }}</td>    
+                <td scope="row">{{ p.ocupacion }}</td>    
+                <td scope="row">{{ p.updated }}</td>    
+                <td>
+                    <a href="{% url 'paciente:editar' p.numDocumento %}"><i class="fa fa-edit text-primary"></i></a>
+                    &nbsp;&nbsp;
+                    <a href="{% url 'paciente:buscar' p.numDocumento %}"><i class="fa fa-eye text-success"></i></a>
+                    &nbsp;&nbsp;
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div class="mt-5">
+    {% include 'paciente/paginator.html' %}
+</div>
+{% else %}
+<p class="alert alert-primary mt-5 text-center">No hay pacientes registrados.</p>
+{% endif %}
+{% endblock %}
+
+{% block js %}
+<script>
+    //Buscar una VPN ingresando el APN ID                 
+    $("#buscar").click(function(){ 
+        Swal.fire({
+            title: '<span class="text-verde">Buscar Paciente</span>',
+            input: 'text',
+            inputAttributes: {
+            autocapitalize: 'off',
+            placeholder: "Ingresar Cédula (sin ptos. ni guiones)",
+            id: 'id_buscar'
+            },
+            showCancelButton: true,
+            "cancelButtonText":"<span style='font-size: medium;'>Cancelar</span>",
+            confirmButtonText: '<span style="font-size: medium;"><i class="fas fa-search"></i> Buscar</span>',
+            showLoaderOnConfirm: true,
+        }).then(function(result){
+            if(result.isConfirmed){                    
+                var cedula = $('#id_buscar').val();
+                window.location.href = "/buscar/"+cedula+"/";
+            }
+        });
+    });        
+</script>
+{% endblock %}

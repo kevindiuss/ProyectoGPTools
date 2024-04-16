@@ -1,0 +1,42 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block content %}
+<div class="card-group">
+    <div class="card bg-negro">
+        <div class="card-header bg-dark text-white">
+            <h4>
+                <i class="fab fa-battle-net text-success"></i>&nbsp;Historia clínica de: <span class="text-success">{{paciente.nombre}} {{paciente.apellido}}</span>
+            </h4>
+        </div>
+    </div>
+</div>
+
+{% if paciente %}
+        <div class="row row-cols-1 row-cols-md-12 mt-3">
+            <div class="col mb-4">            
+                <div class="card h-100">                  
+                    <div class="card-body">
+                    {{ paciente.historia_clinica|linebreaks }}
+                    <!-- linebreaks respeta los saltos de linea -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" onclick="history.back()" class="btn btn-secondary btn-sm">
+            <i class="fas fa-backward"></i>&nbsp;Volver
+        </button>
+{% else %}
+    <div class="row">
+        <div class="card-body text-center">
+            <p class="alert alert-primary">
+                No existe historia clínica para el paciente.
+            </p>
+            <a href="{% url 'paciente:listar' %}" class="btn btn-primary btn-sm">
+                <i class="fas fa-backward"></i>&nbsp;&nbsp;Volver
+            </a>               
+        </div>        
+    </div>        
+{% endif %}
+
+{% endblock %}

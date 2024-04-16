@@ -1,0 +1,235 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block css%}
+<style>
+    /*label{display:none;}*/
+    .errorlist{color: red;}
+</style>
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="card-group">
+    <div class="card bg-dark">
+        <div class="card-header bg-dark text-white">
+            <h4><i class="fab fa-battle-net text-success"></i>&nbsp;Registrar Paciente</h4>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid mt-5">
+    <form action="" method="POST">
+        {% csrf_token %}
+
+
+        <div class="form-row">
+            <div class="form-group col-md-6">                
+                <select class="custom-select" name="tipoId" required id="id_Tipo" required >
+                    <option selected>Tipo de identificación :</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CD">Carné Diplomático</option>         
+                    <option value="CE">Cédula de Extranjería</option>     
+                    <option value="DE">Documento Extranjero</option>     
+                    <option value="PA">Pasaporte</option>     
+                    <option value="PE">Permiso Especial de Permanencia</option>     
+                    <option value="PT">Permiso por Protección Temporal</option>     
+                    <option value="RC">Registro Civil de Nacimiento</option>     
+                    <option value="SC">Salvoconducto</option>     
+                    <option value="TI">Tarjeta de Identidad</option>                
+                </select>
+            </div>
+        <div class="form-group col-md-6">
+            <input type="text" name="numDocumento" maxlength="15" class="form-control" required placeholder="Numero de identificación"> 
+        </div>
+        </div>
+            
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="text" name="nombre" maxlength="50" class="form-control" required placeholder="Nombre"> 
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" name="apellido" maxlength="50" class="form-control" required placeholder="Apellido"> 
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <input type="text" name="telefono" maxlength="20" class="form-control" required placeholder="Teléfono"> 
+            </div>         
+            <div class="form-group col-md-6">
+                <input type="text" name="telefonoDos" maxlength="20" class="form-control" required placeholder="Teléfono en caso de emergencia"> 
+            </div>         
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Email"> 
+            </div>
+            <div class="form-group col-md-2 mt-2">
+                <label>Fecha de nacimiento</label>
+            </div>
+            <div class="form-group col-md-4">
+                <input type="date" name="fecha_nacimiento" class="form-control" placeholder="Fecha de nacimiento"> 
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <input type="text" name="direccion" maxlength="150" class="form-control" placeholder="Dirección">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-2">                
+                <select class="custom-select" name="sexo" required id="id_sexo" required>
+                    <option selected>Sexo:</option>
+                    <option value="F">Femenino</option>
+                    <option value="M">Masculino</option>                    
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <input type="text" class="form-control" name="ocupacion" maxlength="100" required id="id_ocupacion" placeholder="Ocupación">
+            </div>
+
+            <div class="form-group col-md-2">                
+                <select class="custom-select" name="sangre" required id="id_sangre" required>
+                    <option selected>Grupo sanguineo:</option>
+                    <option value="1">Grupo A</option>  
+                    <option value="2">Grupo AB</option>      
+                    <option value="3">Grupo B</option>      
+                    <option value="4">Grupo O</option>      
+                </select>
+            </div>
+            <div class="form-group col-md-2">                
+                <select class="custom-select" name="rh" required id="id_rh" required>
+                    <option selected>Factor RH:</option>
+                    <option value="4">Negativo</option>    
+                    <option value="4">Positivo</option>    
+                </select>
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-5">                
+                <select class="custom-select" name="grupoRiesgo" required id="id_Grupo" required>
+                    <option selected>Grupo de riesgo:</option>
+                    <option value="4">Población con diagnóstico</option>    
+                    <option value="4">Talento humano en salud</option>    
+                    <option value="4">Ninguno</option>    
+                    <option value="4">Poblacion 60 años y mas</option>    
+                    <option value="4">Gestante</option>    
+                    <option value="4">Migrante</option>    
+                </select>
+            </div>
+            <div class="form-group col-md-7">                
+                <select class="custom-select" name="condicionSalud" required id="id_condiSalud" required>
+                    <option selected>Presenta alguna condición de salud?:</option>
+                    <option value="1">Enfermedad coronaria</option>
+                    <option value="2">Insuficiencia renal</option>      
+                    <option value="3">Insuficiencia cardíaca congestiva</option>   
+                    <option value="4">Asplenia</option>   
+                    <option value="5">Diabetes</option>   
+                    <option value="6">Enfermedad pulmonar obstructiva crónica</option>   
+                    <option value="7">Cáncer</option>      
+                    <option value="8">Paciente con diagnóstico de VIH</option>   
+                    <option value="9">Malformación gastrointestinales no corregida</option>   
+                    <option value="10">Enfermedades neurológicas</option>   
+                    <option value="11">Alergia a los antibióticos</option>   
+                    <option value="12">Trastornos hematológicos</option>   
+                    <option value="13">Alergia a vacunas o a componentes de vacunas </option>   
+                    <option value="14">Anomalía cardíaca </option>   
+                    <option value="15">Asma </option>   
+                    <option value="16">Enfermedad que induce al inmunocompromiso</option>   
+                    <option value="17">Síndrome de down </option>   
+                    <option value="18">Obesidad mórbida</option>   
+                    <option value="19">Enfermedades hepáticas crónicas</option>   
+                    <option value="20">Tuberculosis</option>   
+                    <option value="21">Gestantes</option>   
+
+           
+                </select>
+            </div>           
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">                
+                <select class="custom-select" name="regimen" required id="id_Regimen" required>
+                    <option selected>Régimen:</option>
+                    <option value="4">Contributivo</option>  
+                    <option value="4">Subsidiado</option>  
+                    <option value="4">Excepción</option>  
+                    <option value="4">Especial</option>  
+                    <option value="4">No asegurado</option>  
+                </select>
+            </div>
+            <div class="form-group col-md-4">                
+                <select class="custom-select" name="aseguradora" required id="id_Aseguradora" required>
+                    <option selected>Aseguradora:</option>
+                    <option value="4">CCFC15 - COMFACOR(M)</option>  
+                    <option value="4">CCFC20 - COMFACHOCÓ (M)</option>  
+                    <option value="4">CCFC24 - COMFAMILIAR HUILA (M)</option>  
+                    <option value="4">CCFC53 - COMFACUNDI UNICAJAS (M)</option>  
+                    <option value="4">CCFC55 - CAJACOPI ATLÁNTICO (M)</option>  
+                    <option value="4">EPS001 - ALIANSALUD</option>  
+                    <option value="4">EPS002 - SALUD TOTAL</option>  
+                    <option value="4">EPS005 - SANITAS</option>  
+                    <option value="4">EPS008 - COMPENSAR</option>  
+                    <option value="4">EPS010 - EPS SURA</option>  
+                    <option value="4">EPS016 - COOMEVA</option>  
+                    <option value="4">EPS017 - FAMISANAR</option>  
+                    <option value="4">EPS018 - SERVICIO OCCIDENTAL DE SALUD S.O.S.</option>  
+                    <option value="4">EPS023 - CRUZ BLANCA</option>  
+                    <option value="4">EPS033 - SALUDVIDA</option>  
+                    <option value="4">EPS037 - NUEVA EPS</option>  
+                    <option value="4">EPS040 - SAVIA SALUD (M)</option>  
+                    <option value="4">EPS041 - NUEVA EPS (M)</option>  
+                    <option value="4">EPS042 - COOSALUD</option>  
+                    <option value="4">EPS044 - MEDIMAS</option>  
+                    <option value="4">EPSC22 - CONVIDA (M)</option>  
+                    <option value="4">EPSC25 - CAPRESOCA (M)</option>  
+                    <option value="4">EPSC33 - SALUDVIDA (M)</option>  
+                    <option value="4">EPSC34 - CAPITAL SALUD (M)</option>  
+                    <option value="4">EPSS44 - MEDIMAS (M)</option>  
+                    <option value="4">ESSC02 - EMDISALUD E.S.S. (M)</option>  
+                    <option value="4">ESSC07 - MUTUAL SER E.S.S. (M)</option>  
+                    <option value="4">ESSC18 - EMSSANAR E.S.S. (M)</option>  
+                    <option value="4">ESSC24 - COOSALUD E.S.S. (M)</option>  
+                    <option value="4">ESSC33 - COMPARTA E.S.S. (M)</option>  
+                    <option value="4">ESSC62 - ASMET SALUD E.S.S. (M)</option>  
+                    <option value="4">ESSC76 - AMBUQ E.S.S</option>  
+                    <option value="4">ESSC91 - ECOOPSOS E.S.S. (M)</option>  
+                    
+                </select>
+            </div>
+            <div class="form-group col-md-4">                
+                <select class="custom-select" name="tipoAfi" required id="id_Afiliacion" required>
+                    <option selected>Tipo de afiliación:</option>
+                    <option value="4">Cotizante</option>  
+                    <option value="4">Beneficiario</option>  
+                </select>
+            </div>
+
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <textarea name="observaciones" cols="40" rows="10" id="id_observaciones" class="form-control" placeholder="Observaciones"></textarea>
+            </div>
+        </div>
+
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <button type="submit" class="btn btn-success btn-block">
+                   <i class="fa fa-user"></i>&nbsp; Guardar datos
+                </button>
+            </div>
+        </div>
+    </form>             
+</div>
+
+{% endblock %}

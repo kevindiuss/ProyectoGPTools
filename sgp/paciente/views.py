@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, Http404, get_object_or_404
+from django.shortcuts import render, redirect, Http404, get_object_or_404,get_list_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Paciente
 from django.core.paginator import Paginator
@@ -57,11 +57,12 @@ def editar(request, cedula):
 @login_required()
 def buscar(request, cedula):    
     try:
-        paciente = get_object_or_404(Paciente, numDocumento=cedula)
+        paciente = get_list_or_404(Paciente, numDocumento=cedula)
         print(paciente)
-        edad = Paciente.calcularEdad(paciente)
+        print(paciente[0])
+        edad = Paciente.calcularEdad(paciente[0])
         data = {
-            'paciente': paciente,
+            'paciente': paciente[0],
             'edad': edad
         }
         return render(request, 'paciente/buscar.html', data)

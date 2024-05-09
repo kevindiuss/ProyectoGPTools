@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'tratamiento',
     'agenda',
     'presupuesto',
+    'vacunas',
     
     #Plugins - Frameworks
     'crispy_forms',

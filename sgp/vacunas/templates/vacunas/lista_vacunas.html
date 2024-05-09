@@ -1,0 +1,69 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="card-group">
+    <div class="card bg-negro">
+        <div class="card-header bg-dark text-white">
+            <h4>
+                <i class="fab fa-battle-net text-success"></i>&nbsp;Vacunas de: 
+                <span class="text-success">{{paciente.nombre}} {{paciente.apellido}}</span>
+
+            </h4>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="table-responsive">
+    <table id="tabla" class="table table-hover">
+        <thead>
+            <tr class="text-center" >
+                <th scope="col">Biológico</th>
+                <th scope="col">Dosis</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Fecha de aplicaci&oacute;n</th>
+
+
+            </tr>
+        </thead>
+        
+        <tbody>
+
+            <tr>
+                <td scope="row">DPT ACELULAR</td>
+                
+            </tr>
+            <tr><td scope="row">NEUMOCOCO CONJUGADO</td></tr>
+            <tr><td scope="row">MENINGOCOCO</td></tr>
+            <tr><td scope="row">TRIPLE VIRAL</td></tr>
+            <tr><td scope="row">VARICELA</td></tr>
+            <tr><td scope="row">HEPATITIS A</td></tr>
+            <tr><td scope="row">FIEBRE AMARILLA</td></tr>
+            <tr><td scope="row">INFLUENZA</td></tr>
+            <tr><td scope="row">COVID</td></tr>
+            <tr><td scope="row">HERPES ZOSTER</td></tr>
+            <tr><td scope="row">HEPATITIS B</td></tr>
+            <tr><td scope="row">ANTIRRABICA</td></tr>
+            <tr><td scope="row">VPH</td></tr>
+            <tr><td scope="row">HA+HB</td></tr>
+            <tr><td scope="row">TETANO ANTITETANICA</td></tr>
+            <tr><td scope="row">TETANO DIFTERICO</td></tr>
+            <tr><td scope="row">FIEBRE TIFOIDEA</td></tr>
+
+            
+
+
+        </tbody>
+    </table>
+</div>
+<div class="mt-5"
+
+
+{% endblock %}

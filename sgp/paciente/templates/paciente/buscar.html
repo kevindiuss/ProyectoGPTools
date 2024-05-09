@@ -33,8 +33,9 @@
                     <p><i class="fas fa-capsules text-verde"></i>&nbsp;Medicaci&oacute;n: {{paciente.observaciones}}</p>
                     <div class="">
                         <a href="{% url 'tratamiento:paciente_tratamientos' paciente.id %}" class="btn btn-success btn-sm">Tratamientos</a>&nbsp;
-                        <a href="{% url 'tratamiento:paciente_radiografias' paciente.id %}" class="btn btn-primary btn-sm">Radiograf&iacute;as</a>
-                        <a href="{% url 'paciente:historia_clinica' paciente.numDocumento%}" class="btn btn-danger btn-sm">Historia clínica</a>
+                        <a href="{% url 'tratamiento:paciente_radiografias' paciente.id %}" class="btn btn-primary btn-sm">Radiograf&iacute;as</a>&nbsp;
+                        <a href="{% url 'paciente:historia_clinica' paciente.numDocumento%}" class="btn btn-danger btn-sm">Historia clínica</a>&nbsp;
+                        <a href="{% url 'paciente:historia_clinica' paciente.numDocumento%}" class="btn btn-primary btn-sm">Vacunas</a>
                     </div>
                 </div>
 

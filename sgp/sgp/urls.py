@@ -25,6 +25,7 @@ urlpatterns = [
     path('', include('tratamiento.urls')),
     path('', include('agenda.urls')),
     path('', include('presupuesto.urls')),
+    path('', include('vacunas.urls')),
     
     #URLS para autenticacion    
     path('accounts/', include('django.contrib.auth.urls')),

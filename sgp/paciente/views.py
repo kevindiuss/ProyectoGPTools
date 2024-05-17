@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, Http404, get_object_or_404,get_list_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Paciente
+from vacunas.models import VacunasPacientes
 from django.core.paginator import Paginator
 from .forms import PacienteForm
 from vacunas.models import VacunasPacientes
@@ -34,9 +35,11 @@ def paciente_registro(request):
         formulario = PacienteForm(data=request.POST)
         if formulario.is_valid():
             print("hola men2")
+            print(PacienteForm)
             formulario.save()
             # solicitar id de paciente en "PacienteForm" en incluirlo en tabla "vacunasPacientes"
-
+            nuevoPaciente=VacunasPacientes(PACIENTE=PacienteForm)
+            nuevoPaciente.save()
 
             messages.success(request, "Paciente registrado correctamente.")
             return redirect(to="/listar")

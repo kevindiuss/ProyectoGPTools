@@ -35,7 +35,7 @@
                         <a href="{% url 'tratamiento:paciente_tratamientos' paciente.id %}" class="btn btn-success btn-sm">Tratamientos</a>&nbsp;
                         <a href="{% url 'tratamiento:paciente_radiografias' paciente.id %}" class="btn btn-primary btn-sm">Radiograf&iacute;as</a>&nbsp;
                         <a href="{% url 'paciente:historia_clinica' paciente.numDocumento%}" class="btn btn-danger btn-sm">Historia clínica</a>&nbsp;
-                        <a href="{% url 'paciente:historia_clinica' paciente.numDocumento%}" class="btn btn-primary btn-sm">Vacunas</a>
+                        <a href="{% url 'biologicos:vacunas' paciente.numDocumento%}" class="btn btn-primary btn-sm">Vacunas</a>
                     </div>
                 </div>
 

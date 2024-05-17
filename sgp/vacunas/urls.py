@@ -4,6 +4,6 @@ from . import views
 app_name = 'biologicos'
 
 urlpatterns = [
-    path('biologicos/', views.vacunas, name="vacunas"),
+    path('biologicos/<cedula>/', views.vacunas, name="vacunas"),
 
 ]

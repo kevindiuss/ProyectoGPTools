@@ -2,6 +2,60 @@
 
 {% load static %}
 
+{% block css%}
+<style>
+    /* Tooltip container */
+.mitooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.mitooltip .mitooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.mitooltip .mitooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.mitooltip:hover .mitooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+</style>
+
+{% endblock %}
+
 {% load crispy_forms_tags %}
 
 {% block content %}
@@ -10,8 +64,8 @@
     <div class="card bg-negro">
         <div class="card-header bg-dark text-white">
             <h4>
-                <i class="fab fa-battle-net text-success"></i>&nbsp;Vacunas de: 
-                <span class="text-success">{{paciente.nombre}} {{paciente.apellido}}</span>
+                <i class="fab fa-battle-net text-success"></i>&nbsp;Vacunas de:
+                <span class="text-success" style="text-transform:capitalize">{{paciente.nombre}} {{paciente.apellido}}</span>
 
             </h4>
         </div>
@@ -20,15 +74,20 @@
 
 
 
-
 <div class="table-responsive">
     <table id="tabla" class="table table-hover">
         <thead>
             <tr class="text-center" >
-                <th scope="col">Biológico</th>
-                <th scope="col">Dosis</th>
-                <th scope="col">Estado</th>
-                <th scope="col">Fecha de aplicaci&oacute;n</th>
+                <th scope="col">Vacunas\Dosis</th>
+                <th scope="col">Única</th>
+                <th scope="col">Primera dosis</th>
+                <th scope="col">Segunda dosis</th>
+                <th scope="col">Tercera dosis</th>
+                <th scope="col">Cuarta dosis</th>
+                <th scope="col">Quinta dosis</th>
+                <th scope="col">Refuerzo</th>
+                <th scope="col">Segundo Refuerzo</th>
+
 
 
             </tr>
@@ -40,7 +99,25 @@
                 <td scope="row">DPT ACELULAR</td>
                 
             </tr>
-            <tr><td scope="row">NEUMOCOCO CONJUGADO</td></tr>
+            <tr>
+                <td scope="row">NEUMOCOCO CONJUGADO</td>
+                
+                <td ><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="segundaNeumo">
+
+                <i class="fas fa-syringe mitooltip">
+                    <span class="text-white mitooltiptext">Esta vacuna ya fue aplicada</span>
+                </i>
+                </a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
+
+                
+            </tr>
             <tr><td scope="row">MENINGOCOCO</td></tr>
             <tr><td scope="row">TRIPLE VIRAL</td></tr>
             <tr><td scope="row">VARICELA</td></tr>
@@ -58,12 +135,30 @@
             <tr><td scope="row">FIEBRE TIFOIDEA</td></tr>
 
             
-
+            
 
         </tbody>
     </table>
 </div>
-<div class="mt-5"
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+    $("#primerNeumo").click(function(){
+        alert(this.id);
+        // var b=document.querySelector("#primerNeumo");
+        // b.setAttribute("class","text-primary")
+    });
+    });
+
+
+
+</script>
+
+
+
+<div class="mt-5"></div>
 
 
 {% endblock %}

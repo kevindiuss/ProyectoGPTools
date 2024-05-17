@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from .models import Paciente
 from django.core.paginator import Paginator
 from .forms import PacienteForm
+from vacunas.models import VacunasPacientes
 from django.contrib import messages
 from datetime import datetime
 
@@ -34,10 +35,13 @@ def paciente_registro(request):
         if formulario.is_valid():
             print("hola men2")
             formulario.save()
+            # solicitar id de paciente en "PacienteForm" en incluirlo en tabla "vacunasPacientes"
+
+
             messages.success(request, "Paciente registrado correctamente.")
             return redirect(to="/listar")
         data["form"] = formulario
-    return render(request, 'paciente/paciente_registro.html', data)
+    return render(request, 'paciente/paciente_registro.html',data)
 
 @login_required()
 def editar(request, cedula):

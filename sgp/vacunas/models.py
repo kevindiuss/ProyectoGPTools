@@ -6,7 +6,7 @@ from paciente.models import Paciente
 
 class VacunasPacientes(models.Model):
 
-    PACIENTE=models.OneToOneField(Paciente, on_delete=models.CASCADE,primary_key=True)
+    PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
     DPT_ACELULAR= models.CharField(max_length=50, verbose_name='DPT', default="no")
     NEUMOCOCO_CONJUGADO= models.CharField(max_length=50, verbose_name='NEUMOCON', default="no")
     MENINGOCOCO= models.CharField(max_length=50, verbose_name='MENINGO', default="no")
@@ -27,3 +27,48 @@ class VacunasPacientes(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+# class DPTA(models.Model):
+
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+
+class NEUMOCON(models.Model):
+    PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+    VACUNA=models.CharField(max_length=25, verbose_name='vacuna')
+    LABORATORIO=models.CharField(max_length=25, verbose_name='laboratorio')
+    LOTE=models.CharField(max_length=20, verbose_name='lote')
+    FECHAAPLI=models.DateField()
+    FECHAPROX=models.DateField()
+    NUMFACTURA=models.CharField(max_length=30, verbose_name='numfactura')
+
+
+# class MENINGO(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class TRIPLEVI(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class VARICELA(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class HA(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class FIEAMA(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class INFLU(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class COVID(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class HERPES(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class HB(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class ANTIRRA(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class VPH(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class HAHB(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class TETANAN(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class TETADIFT(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+# class FIEBTIFO(models.Model):
+#     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)

@@ -1,0 +1,74 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block css%}
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="card-group">
+    <div class="card bg-negro">
+        <div class="card-header bg-dark text-white">
+            <h4><i class="fab fa-battle-net text-verde"></i>&nbsp;Paciente:
+                <span class="text-success" style="text-transform:capitalize">{{nombre}} {{apellido}}</span>
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">   
+    
+        <div class="form-group col-md-8 bg-dark text-white">            
+            <div class="card-body">
+                <h2 class="text-naranja">{{biologico}}</h2>
+                <hr class="bg-verde">
+                <form action="" method="POST">
+                    <div class="form-row"> 
+                        <h2 class="form-group text-white">
+                            <label name="dosis">&nbsp;{{dosis}}</label>
+                        </h2>   
+                    </div>
+                    <br>
+
+                    <div class="form-row"> 
+                        <div class="form-group col-md-6">
+                            <label>Laboratorio</label>
+                            <input type="text" name="laboratorio" class="form-control" id="id_username">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Lote</label>
+                            <input type="text" name="lote" class="form-control" id="id_password">
+                        </div>
+                    </div>
+
+
+                    <div class="form-row"> 
+                        <div class="form-group col-md-6">
+                            <label>Fecha de aplicación</label>
+                            <input type="text" name="fechaapli" class="form-control" id="id_password">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Fecha proxima aplicación</label>
+                            <input type="text" name="fechaproxi" class="form-control" id="id_password">
+                        </div> 
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label># de factura</label>
+                            <input type="text" name="factura" class="form-control" id="id_password">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <button type="submit" class="form-group btn btn-primary float-right">
+                            <i class="fas fa-sign-in-alt"></i>&nbsp;Cargar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>
+<br>
+{% endblock %}

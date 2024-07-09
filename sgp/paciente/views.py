@@ -4,9 +4,10 @@ from .models import Paciente
 from vacunas.models import VacunasPacientes
 from django.core.paginator import Paginator
 from .forms import PacienteForm
-from vacunas.models import VacunasPacientes
 from django.contrib import messages
 from datetime import datetime
+
+
 
 # Create your views here.
 
@@ -34,12 +35,22 @@ def paciente_registro(request):
         print("hola men1")
         formulario = PacienteForm(data=request.POST)
         if formulario.is_valid():
-            print("hola men2")
-            print(PacienteForm)
+            # para acceder a el valor de una variable de Modelform usamos la siguiente instrucción
+            # cedulaPaciente=formulario["numDocumento"].data
             formulario.save()
+            # pacienteActual=Paciente.objects.filter(numDocumento=cedulaPaciente)
+            # print(pacienteActual[0])
+            # elpaciente=pacienteActual[0]
+            # print(formulario.instance)
+            miinstancia=formulario.instance
             # solicitar id de paciente en "PacienteForm" en incluirlo en tabla "vacunasPacientes"
-            nuevoPaciente=VacunasPacientes(PACIENTE=PacienteForm)
+            nuevoPaciente=VacunasPacientes(PACIENTE=miinstancia)
             nuevoPaciente.save()
+            # mipaciente=Paciente.objects.get(numDocumento=546987132)
+            # print(mipaciente)
+            
+            # nuevoPaciente2=VacunasPacientes(PACIENTE=mipaciente)
+            # nuevoPaciente2.save()
 
             messages.success(request, "Paciente registrado correctamente.")
             return redirect(to="/listar")

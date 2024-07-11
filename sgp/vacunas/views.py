@@ -22,6 +22,16 @@ def vacunas(request, cedula):
     
 def infova(request, id, bio):
 
+    if request.method == 'POST':
+        print("hola men1")
+
+        messages.success(request, "Biológico cargado correctamente.")
+
+        PacienteActual=Paciente.objects.get(id=id)
+
+        numDocPaciente=PacienteActual.numDocumento
+
+        return redirect('/biologicos/'+numDocPaciente)
     
 
     match bio:
@@ -44,7 +54,7 @@ def infova(request, id, bio):
                 'apellido': PacienteActual.apellido
             }
 
-            print(PacienteActual)
+            print(PacienteActual, "hola people")
 
             return render(request, 'vacunas/info_vacunas.html', data)
 
@@ -60,5 +70,5 @@ def infova(request, id, bio):
         case "1007":
             print("7ma dosis")
 
-
+    
     return render(request, 'vacunas/info_vacunas.html')

@@ -24,6 +24,7 @@
                 <h2 class="text-naranja">{{biologico}}</h2>
                 <hr class="bg-verde">
                 <form action="" method="POST">
+                    {% csrf_token %}
                     <div class="form-row"> 
                         <h2 class="form-group text-white">
                             <label name="dosis">&nbsp;{{dosis}}</label>

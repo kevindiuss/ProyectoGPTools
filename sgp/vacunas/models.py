@@ -34,12 +34,15 @@ class VacunasPacientes(models.Model):
 
 class NEUMOCON(models.Model):
     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
-    VACUNA=models.CharField(max_length=25, verbose_name='vacuna')
+    VACUNA=models.CharField(max_length=25, verbose_name='vacuna',default="Neumocon")
     LABORATORIO=models.CharField(max_length=25, verbose_name='laboratorio')
     LOTE=models.CharField(max_length=20, verbose_name='lote')
     FECHAAPLI=models.DateField()
     FECHAPROX=models.DateField()
     NUMFACTURA=models.CharField(max_length=30, verbose_name='numfactura')
+
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
 
 
 # class MENINGO(models.Model):

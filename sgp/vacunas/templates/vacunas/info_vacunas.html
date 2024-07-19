@@ -10,8 +10,8 @@
 <div class="card-group">
     <div class="card bg-negro">
         <div class="card-header bg-dark text-white">
-            <h4><i class="fab fa-battle-net text-verde"></i>&nbsp;Paciente:
-                <span class="text-success" style="text-transform:capitalize">{{nombre}} {{apellido}}</span>
+            <h4><i class="fab fa-battle-net text-verde" ></i>&nbsp;Paciente:
+                <span class="text-success" style="text-transform:capitalize">{{nombre}} {{apellido}} {{idpaciente}}</span>
             </h4>
         </div>
     </div>
@@ -24,10 +24,11 @@
                 <h2 class="text-naranja">{{biologico}}</h2>
                 <hr class="bg-verde">
                 <form action="" method="POST">
+
                     {% csrf_token %}
                     <div class="form-row"> 
                         <h2 class="form-group text-white">
-                            <label name="dosis">&nbsp;{{dosis}}</label>
+                            <label name="DOSIS">&nbsp;{{dosis}}</label>
                         </h2>   
                     </div>
                     <br>
@@ -35,11 +36,14 @@
                     <div class="form-row"> 
                         <div class="form-group col-md-6">
                             <label>Laboratorio</label>
-                            <input type="text" name="laboratorio" class="form-control" id="id_username">
+                            <input type="text" name="LABORATORIO" class="form-control" id="id_username">
+                            <label name="PACIENTE">{{idpaciente}}</label>
+                            <label class="form-control" name="VACUNA">{{biologico}}</label>
                         </div>
                         <div class="form-group col-md-6">
                             <label>Lote</label>
-                            <input type="text" name="lote" class="form-control" id="id_password">
+                            <input type="text" name="LOTE" class="form-control" id="id_password">
+
                         </div>
                     </div>
 
@@ -47,18 +51,18 @@
                     <div class="form-row"> 
                         <div class="form-group col-md-6">
                             <label>Fecha de aplicación</label>
-                            <input type="text" name="fechaapli" class="form-control" id="id_password">
+                            <input type="text" name="FECHAAPLI" class="form-control" id="id_password">
                         </div>
                         <div class="form-group col-md-6">
                             <label>Fecha proxima aplicación</label>
-                            <input type="text" name="fechaproxi" class="form-control" id="id_password">
+                            <input type="text" name="FECHAPROX" class="form-control" id="id_password">
                         </div> 
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label># de factura</label>
-                            <input type="text" name="factura" class="form-control" id="id_password">
+                            <input type="text" name="NUMFACTURA" class="form-control" id="id_password">
                         </div>
                     </div>
 

@@ -57,38 +57,53 @@ def infova(request, id, bio):
                 print("7ma dosis")
 
         formulario = NEUMOCOCO(data=request.POST, files=request.FILES)
+
         print(request.POST)
+        print(request.user)
+        print(formulario.errors)
         if formulario.is_valid():
             #Completo el paciente
-            formulario.instance.PACIENTE = get_object_or_404(Paciente, id=request.POST['PACIENTE'])
+            formulario.instance.PACIENTE = get_object_or_404(Paciente, id=id)
+            nombreusuario=str(request.user)
+            formulario.instance.NOMBREVACUNADOR=nombreusuario
+
             formulario.save()
-            messages.success(request, "Se guardaron los datos del tratamiento.")
-            return redirect(to="/listar_tratamientos")
+          
+            # return redirect(to="/listar_tratamientos")
 
 
-        # Marca la vacuna como aplicada en esquema
+            # Marca la vacuna como aplicada en esquema
 
-        holawey=VacunasPacientes
+            holawey=VacunasPacientes
 
-        esquemapaciente=holawey.objects.get(PACIENTE_id=id)
+            esquemapaciente=holawey.objects.get(PACIENTE_id=id)
 
-        esquemapaciente.__setattr__(vacunaregistrar,"hola")
-        esquemapaciente.save()
+            esquemapaciente.__setattr__(vacunaregistrar,"si")
+            esquemapaciente.save()
 
-        # prueba esto es para neumococo
-        # lainstancia=Paciente.objects.get(id=id)
-        # formNeumocon= NEUMOCOCO(data=request.POST)
+            # prueba esto es para neumococo
+            # lainstancia=Paciente.objects.get(id=id)
+            # formNeumocon= NEUMOCOCO(data=request.POST)
 
-        # neumovacuna=NEUMOCON(PACIENTE=lainstancia,formNeumocon)
+            # neumovacuna=NEUMOCON(PACIENTE=lainstancia,formNeumocon)
 
 
-        messages.success(request, "Biológico cargado correctamente.")
+            messages.success(request, "Biológico cargado correctamente.")
 
-        # Devuelve pagina esquema de paciente
+            # Devuelve pagina esquema de paciente
+            PacienteActual=Paciente.objects.get(id=id)
+
+            numDocPaciente=PacienteActual.numDocumento
+
+            
+            return redirect('/biologicos/'+numDocPaciente)
+        
+        
         PacienteActual=Paciente.objects.get(id=id)
 
         numDocPaciente=PacienteActual.numDocumento
-
+        
+        messages.success(request, "No se pudo cargar el Biologico.")
         return redirect('/biologicos/'+numDocPaciente)
 
 
@@ -113,7 +128,8 @@ def infova(request, id, bio):
                 'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
-                'idpaciente':PacienteActual.pk,
+                'idpaciente': PacienteActual.pk,
+                'vacunador': request.user,
             }
 
             print(PacienteActual, "hola people")

@@ -7,4 +7,4 @@ class NEUMOCOCO(forms.ModelForm):
     class Meta:
         model = NEUMOCON
         fields = '__all__'
-        exclude = ('created', 'updated')
+        exclude = ('created', 'updated', 'PACIENTE', 'NOMBREVACUNADOR')

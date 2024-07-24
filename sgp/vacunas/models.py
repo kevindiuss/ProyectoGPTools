@@ -34,12 +34,16 @@ class VacunasPacientes(models.Model):
 
 class NEUMOCON(models.Model):
     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
-    VACUNA=models.CharField(max_length=25, verbose_name='vacuna',default="Neumocon")
-    LABORATORIO=models.CharField(max_length=25, verbose_name='laboratorio')
+    LABORATORIO=models.CharField(max_length=25, verbose_name='labo')
     LOTE=models.CharField(max_length=20, verbose_name='lote')
-    FECHAAPLI=models.DateField()
-    FECHAPROX=models.DateField()
-    NUMFACTURA=models.CharField(max_length=30, verbose_name='numfactura')
+    FECHAVENVACU=models.DateTimeField(verbose_name='fechavenvacun')    
+    TACTIVAVACU=models.CharField(max_length=25, verbose_name='tacticavacun')
+    FECHAAPLI=models.DateTimeField(verbose_name='fechaaplica')
+    FECHAPROX=models.DateTimeField(verbose_name='fechaproxivacun')
+    EMPRESA=models.CharField(max_length=30, verbose_name='nombrempresa')
+    CONDICIONUSUARIA=models.CharField(max_length=30,verbose_name='condicionusuario')
+    NOMBREVACUNADOR=models.CharField(max_length=30,verbose_name='nombrevacunadora')
+    NUMFACTURA=models.CharField(max_length=30, verbose_name='numfactu')
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

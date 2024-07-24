@@ -11,7 +11,7 @@
     <div class="card bg-negro">
         <div class="card-header bg-dark text-white">
             <h4><i class="fab fa-battle-net text-verde" ></i>&nbsp;Paciente:
-                <span class="text-success" style="text-transform:capitalize">{{nombre}} {{apellido}} {{idpaciente}}</span>
+                <span class="text-success" style="text-transform:capitalize">{{nombre}} {{apellido}} </span>
             </h4>
         </div>
     </div>
@@ -19,7 +19,7 @@
 
 <div class="container-fluid">   
     
-        <div class="form-group col-md-8 bg-dark text-white">            
+        <div class="form-group col-md-12 bg-dark text-white">            
             <div class="card-body">
                 <h2 class="text-naranja">{{biologico}}</h2>
                 <hr class="bg-verde">
@@ -34,29 +34,54 @@
                     <br>
 
                     <div class="form-row"> 
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label>Laboratorio</label>
                             <input type="text" name="LABORATORIO" class="form-control" id="id_username">
-                            <label name="PACIENTE">{{idpaciente}}</label>
-                            <label class="form-control" name="VACUNA">{{biologico}}</label>
+
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <label>Lote</label>
                             <input type="text" name="LOTE" class="form-control" id="id_password">
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Fecha de vencimiento</label>
+                            <input type="date" name="FECHAVENVACU" class="form-control" id="id_password">
 
                         </div>
                     </div>
 
 
                     <div class="form-row"> 
-                        <div class="form-group col-md-6">
-                            <label>Fecha de aplicación</label>
-                            <input type="text" name="FECHAAPLI" class="form-control" id="id_password">
+                        <div class="form-group col-md-4">
+                            <label>Táctica de vacunación</label>
+                            <input type="text" name="TACTIVAVACU" class="form-control" id="id_password">
                         </div>
-                        <div class="form-group col-md-6">
+
+                        <div class="form-group col-md-4">
+                            <label>Fecha de aplicación</label>
+                            <input type="date" name="FECHAAPLI" class="form-control" id="id_password">
+                        </div>
+                        <div class="form-group col-md-4">
                             <label>Fecha proxima aplicación</label>
-                            <input type="text" name="FECHAPROX" class="form-control" id="id_password">
+                            <input type="date" name="FECHAPROX" class="form-control" id="id_password">
                         </div> 
+                    </div>
+                    <div class="form-row"> 
+
+                        <div class="form-group col-md-4">
+                            <label>Empresa</label>
+                            <input type="text" name="EMPRESA" class="form-control" id="id_password">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Condición de usuaria</label>
+                            <input type="text" name="CONDICIONUSUARIA" class="form-control" id="id_password">
+                        </div> 
+                        <div class="form-group col-md-4">
+                            <label>Nombre de vacunador</label>
+                            <label name="NOMBREVACUNADOR" class="form-control" id="id_password">{{vacunador}}</label>
+                        </div>
+
                     </div>
 
                     <div class="form-row">

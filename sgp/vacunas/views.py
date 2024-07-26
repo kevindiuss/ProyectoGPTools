@@ -8,6 +8,7 @@ from vacunas.models import VacunasPacientes
 
 from vacunas.models import NEUMOCON
 from vacunas.forms import NEUMOCOCO
+from json import dumps
 
 
 # Create your views here.
@@ -15,14 +16,22 @@ from vacunas.forms import NEUMOCOCO
 def vacunas(request, cedula):
 
     paciente = get_list_or_404(Paciente, numDocumento=cedula)
-    print(paciente)
-    print(paciente[0])
+    esquemavacpaciente=get_object_or_404(VacunasPacientes, pk=paciente[0].pk)
+
+
     edad = Paciente.calcularEdad(paciente[0])
     data = {
         'paciente': paciente[0],
-        'edad': edad
+        'edad': edad,   
+        'neumotres':'neumomihermano    ',
+        'neumococo': esquemavacpaciente.NEUMOCOCO_CONJUGADO_3,
+        'influenza': esquemavacpaciente.INFLUENZA_3
     }
+
+    
     return render(request, 'vacunas/lista_vacunas.html', data)
+
+
     
 def infova(request, id, bio):
 
@@ -42,7 +51,7 @@ def infova(request, id, bio):
 
             case "1003":
 
-                vacunaregistrar="NEUMOCOCO_CONJUGADO"
+                vacunaregistrar="NEUMOCOCO_CONJUGADO_3"
 
             case "1004":
                 print("4ta dosis")

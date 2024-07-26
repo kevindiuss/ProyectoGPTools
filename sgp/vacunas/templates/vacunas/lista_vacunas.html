@@ -100,7 +100,7 @@
                 
             </tr>
             <tr>
-                <td scope="row">NEUMOCOCO CONJUGADO</td>
+                <td scope="row">NEUMOCOCO CONJUGADO {{neumotres}}</td>
                 
                 <td ><a href="{% url 'biologicos:informacionva' paciente.id 1000 %}" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></td>
                 <td ><a href="#" class="text-muted" id="segundaNeumo">
@@ -109,25 +109,25 @@
                     <span class="text-white mitooltiptext">Esta vacuna ya fue aplicada</span>
                 </i>
                 </a></td>
-                <td ><h2><a href="{% url 'biologicos:informacionva' paciente.id 1002 %}" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="{% url 'biologicos:informacionva' paciente.id 1003 %}" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="{% url 'biologicos:informacionva' paciente.id 1004 %}" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="{% url 'biologicos:informacionva' paciente.id 1005 %}" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="{% url 'biologicos:informacionva' paciente.id 1006 %}" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="{% url 'biologicos:informacionva' paciente.id 1007 %}" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
+                <td ><a href="{% url 'biologicos:informacionva' paciente.id 1002 %}" class="text-muted" id="primerNeumo" style="font-size: 20px;" value="{{paciente.nombre}}"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="{% url 'biologicos:informacionva' paciente.id 1003 %}" class="text-muted" id="tercerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="{% url 'biologicos:informacionva' paciente.id 1004 %}" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="{% url 'biologicos:informacionva' paciente.id 1005 %}" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="{% url 'biologicos:informacionva' paciente.id 1006 %}" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="{% url 'biologicos:informacionva' paciente.id 1007 %}" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
 
                 
             </tr>
             <tr>
                 <td scope="row">MENINGOCOCO</td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>
-                <td ><h2><a href="#" class="text-muted" id="primerNeumo"><i class="fas fa-syringe"></i></a></h2></td>    
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>
+                <td ><a href="#" class="text-muted" id="primerNeumo" style="font-size: 20px;"><i class="fas fa-syringe"></i></a></td>    
             </tr>
             
             <tr><td scope="row">TRIPLE VIRAL</td></tr>
@@ -154,7 +154,31 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+
 <script>
+    
+ 
+    let neumococo3="{{neumococo}}"
+    let influenza="{{influenza}}"
+
+
+    if (neumococo3=="si"){
+
+        var b=document.querySelector("#tercerNeumo");
+        b.setAttribute("class","text-primary")
+
+
+        
+    }
+    
+
+
+
+
+
+
     $(document).ready(function(){
     $("#primerNeumo").click(function(){
         alert(this.id);

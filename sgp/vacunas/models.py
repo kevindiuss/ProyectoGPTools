@@ -167,8 +167,7 @@ class VacunasPacientes(models.Model):
 # class DPTA(models.Model):
 
 #     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
-
-class NEUMOCON(models.Model):
+class Datoscomunvacun(models.Model):
     PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
     LABORATORIO=models.CharField(max_length=25, verbose_name='labo')
     LOTE=models.CharField(max_length=20, verbose_name='lote')
@@ -183,6 +182,36 @@ class NEUMOCON(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+
+class NEUMOCON(Datoscomunvacun):
+    pass
+
+class NEUMOCON1(Datoscomunvacun):
+    pass
+    
+class NEUMOCON2(Datoscomunvacun):
+    pass
+    
+class NEUMOCON3(Datoscomunvacun):
+    pass
+
+class NEUMOCON4(Datoscomunvacun):
+    pass
+
+class NEUMOCON5(Datoscomunvacun):
+    pass
+
+class NEUMOCONR1(Datoscomunvacun):
+    pass
+
+class NEUMOCONR2(Datoscomunvacun):
+    pass
+
+class NEUMOCONR3(Datoscomunvacun):
+    pass
+
+
 
 
 # class MENINGO(models.Model):

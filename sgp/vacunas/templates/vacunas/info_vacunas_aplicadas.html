@@ -1,0 +1,113 @@
+{% extends 'core/base.html'%}
+{% load static %}
+
+{% block css%}
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="card-group">
+    <div class="card bg-negro">
+        <div class="card-header bg-dark text-white">
+            <h4><i class="fab fa-battle-net text-verde" ></i>&nbsp;Paciente:
+                <span class="text-success" style="text-transform:capitalize">{{nombre}} {{apellido}} </span>
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">   
+    
+        <div class="form-group col-md-12 bg-dark text-white">            
+            <div class="card-body">
+                <h2 class="text-naranja">{{biologico}}</h2>
+                <hr class="bg-verde">
+                <form action="" method="POST">
+
+                    {% csrf_token %}
+                    <div class="form-row"> 
+                        <h2 class="form-group text-white">
+                            <label name="DOSIS">&nbsp;{{dosis}}</label>
+                        </h2>   
+                    </div>
+                    <br>
+
+                    <div class="form-row"> 
+                        <div class="form-group col-md-4">
+                            <label>Laboratorio</label>
+                            <label name="laboratorio" class="form-control" id="labo" style="background-color: gray; color:white;">{{laboratorio}}</label>
+                            <!-- <input type="text" name="LABORATORIO" class="form-control" id="id_username"> -->
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Lote</label>
+                            <label name="lote" class="form-control" id="lote" style="background-color: gray;color: white;">{{lote}}</label>
+                            <!-- <input type="text" name="LOTE" class="form-control" id="id_password"> -->
+
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Fecha de vencimiento</label>
+                            <label name="fechaven" class="form-control" id="fechaven" style="background-color: gray;color: white;">{{fechavenvacu}}</label>
+                            <!-- <input type="date" name="FECHAVENVACU" class="form-control" id="id_password"> -->
+
+                        </div>
+                    </div>
+
+
+                    <div class="form-row"> 
+                        <div class="form-group col-md-4">
+                            <label>Táctica de vacunación</label>
+                            <label name="tactica" class="form-control" id="tactica" style="background-color: gray;color: white;">{{tactivacu}}</label>
+                            <!-- <input type="text" name="TACTIVAVACU" class="form-control" id="id_password"> -->
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label>Fecha de aplicación</label>
+                            <label name="fechaapli" class="form-control" id="fechaapli" style="background-color: gray;color: white;">{{fechaapli}}</label>
+                            <!-- <input type="date" name="FECHAAPLI" class="form-control" id="id_password"> -->
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Fecha proxima aplicación</label>
+                            <label name="fechaprox" class="form-control" id="fechaprox" style="background-color: gray;color: white;">{{fechaprox}}</label>
+                            <!-- <input type="date" name="FECHAPROX" class="form-control" id="id_password"> -->
+                        </div> 
+                    </div>
+                    <div class="form-row"> 
+
+                        <div class="form-group col-md-4">
+                            <label>Empresa</label>
+                            <label name="empresa" class="form-control" id="empresa" style="background-color: gray;color: white;">{{empresa}}</label>
+                            <!-- <input type="text" name="EMPRESA" class="form-control" id="id_password"> -->
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Condición de usuaria</label>
+                            <label name="condicionusuaria" class="form-control" id="condicionusuaria" style="background-color: gray;color: white;">{{condicionusuaria}}</label>
+                            <!-- <input type="text" name="CONDICIONUSUARIA" class="form-control" id="id_password"> -->
+                        </div> 
+                        <div class="form-group col-md-4">
+                            <label>Nombre de vacunador</label>
+                            <label name="NOMBREVACUNADOR" class="form-control" id="id_password" style="background-color: gray;color: white;">{{vacunador}}</label>
+                        </div>
+
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label># de factura</label>
+                            <label name="numfactura" class="form-control" id="numfactura" style="background-color: gray;color: white;">{{numfactura}}</label>
+                            <!-- <input type="text" name="NUMFACTURA" class="form-control" id="id_password"> -->
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-row">
+                        <button type="submit" class="form-group btn btn-primary float-right">
+                            <i class="fas fa-sign-in-alt"></i>&nbsp;Cargar
+                        </button>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+</div>
+<br>
+{% endblock %}

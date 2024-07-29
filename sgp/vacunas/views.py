@@ -116,6 +116,10 @@ def infova(request, id, bio):
         return redirect('/biologicos/'+numDocPaciente)
 
 
+    PacienteActual=Paciente.objects.get(id=id)
+
+    vacunaregistrar="NEUMOCOCO_CONJUGADO"
+
     match bio:
         case "1000":
             print("Unica")
@@ -128,38 +132,92 @@ def infova(request, id, bio):
 
         case "1003":
 
-            vacunaregistrar="NEUMOCOCO_CONJUGADO"
-
-            PacienteActual=Paciente.objects.get(id=id)
+            nombretabbio=NEUMOCON
 
             data={
                 'biologico':'Neumococo Conjugado',
                 'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
-                'idpaciente': PacienteActual.pk,
                 'vacunador': request.user,
             }
-
-            print(PacienteActual, "hola people")
-
-            return render(request, 'vacunas/info_vacunas.html', data)
 
         case "1004":
             print("4ta dosis")
 
         case "1005":
-            print("5ta dosis")
+            print("4ta dosis")
 
         case "1006":
-            print("6ta dosis")
+            print("4ta dosis")
 
         case "1007":
-            print("7ma dosis")
+            print("4ta dosis")
 
+        case "1008":
+            print("4ta dosis")
 
+        case "2000":
+            print("4ta dosis")
 
+        case "2001":
+            print("4ta dosis")
+
+        case "2002":
+            print("4ta dosis")
+
+        case "2003":
+            print("4ta dosis")
+
+        case "2004":
+            print("4ta dosis")
+
+        case "2005":
+            print("4ta dosis")
+
+        case "2006":
+            print("4ta dosis")
+
+        case "2007":
+            print("4ta dosis")
+
+        case "2008":
+            print("4ta dosis")
+
+    print(id)
+    print(NEUMOCON.objects.values_list('pk',flat=True))
+    # si el paciente se encuentra en bd de vacuna...
+    # if id in NEUMOCON.objects.values_list('pk', flat=True):
+    if nombretabbio.objects.filter(pk=id).exists():
+
+        tabbio=nombretabbio.objects.get(pk=id)
+
+        print(data)
+
+        datosaplibio={
+        'laboratorio':tabbio.LABORATORIO,
+        'lote':tabbio.LOTE,
+        'fechavenvacu':tabbio.FECHAVENVACU,
+        'tactivacu':tabbio.TACTIVAVACU,
+        'fechaapli':tabbio.FECHAAPLI,
+        'fechaprox':tabbio.FECHAPROX,
+        'empresa':tabbio.EMPRESA,
+        'condicionusuaria':tabbio.CONDICIONUSUARIA,
+        'numfactura':tabbio.NUMFACTURA,
+        }
+
+        print('Ya existe esta aplicacion')
+
+        data.update(datosaplibio)
+        print(data)
+
+        return render(request, 'vacunas/info_vacunas_aplicadas.html',data)
+
+        
+
+    else:
+        print('no existe')
     
-
+        return render(request, 'vacunas/info_vacunas.html',data)
     
-    return render(request, 'vacunas/info_vacunas.html')
+    

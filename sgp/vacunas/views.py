@@ -193,39 +193,39 @@ def infova(request, id, bio):
         
         match bio:
 
-            case "0000":
+            case "17000":
                 nombreform=DPT_ACELULAR_U
                 vacunaregistrar="DPT_ACELULAR_U"
 
-            case "0001":
+            case "17001":
                 nombreform=DPT_ACELULAR_1
                 vacunaregistrar="DPT_ACELULAR_1"
 
-            case "0002":
+            case "17002":
                 nombreform=DPT_ACELULAR_2
                 vacunaregistrar="DPT_ACELULAR_2"
 
-            case "0003":
+            case "17003":
                 nombreform=DPT_ACELULAR_3
                 vacunaregistrar="DPT_ACELULAR_3"
 
-            case "0004":
+            case "17004":
                 nombreform=DPT_ACELULAR_4
                 vacunaregistrar="DPT_ACELULAR_4"
 
-            case "0005":
+            case "17005":
                 nombreform=DPT_ACELULAR_5
                 vacunaregistrar="DPT_ACELULAR_5"
 
-            case "0006":
+            case "17006":
                 nombreform=DPT_ACELULAR_R1
                 vacunaregistrar="DPT_ACELULAR_R1"
 
-            case "0007":
+            case "17007":
                 nombreform=DPT_ACELULAR_R2
                 vacunaregistrar="DPT_ACELULAR_R2"
 
-            case "0008":
+            case "17008":
                 nombreform=DPT_ACELULAR_R3
                 vacunaregistrar="DPT_ACELULAR_R3"
 
@@ -863,100 +863,100 @@ def infova(request, id, bio):
 
     match bio:
 
-        case "0000":
-            nombretabbio=DPT_ACELULAR_U
+        case "17000":
+            nombretabbio=T_DPT_ACELULAR_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'DPT ACELULAR',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0001":
-            nombretabbio=DPT_ACELULAR_1
+        case "17001":
+            nombretabbio=T_DPT_ACELULAR_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0002":
-            nombretabbio=DPT_ACELULAR_2
+        case "17002":
+            nombretabbio=T_DPT_ACELULAR_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0003":
-            nombretabbio=DPT_ACELULAR_3
+        case "17003":
+            nombretabbio=T_DPT_ACELULAR_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0004":
-            nombretabbio=DPT_ACELULAR_4
+        case "17004":
+            nombretabbio=T_DPT_ACELULAR_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0005":
-            nombretabbio=DPT_ACELULAR_5
+        case "17005":
+            nombretabbio=T_DPT_ACELULAR_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0006":
-            nombretabbio=DPT_ACELULAR_R1
+        case "17006":
+            nombretabbio=T_DPT_ACELULAR_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0007":
-            nombretabbio=DPT_ACELULAR_R2
+        case "17007":
+            nombretabbio=T_DPT_ACELULAR_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
-        case "0008":
-            nombretabbio=DPT_ACELULAR_R3
+        case "17008":
+            nombretabbio=T_DPT_ACELULAR_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'DPT ACELULAR',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
@@ -1064,10 +1064,10 @@ def infova(request, id, bio):
 
 
         case "2000":
-            nombretabbio=MENINGOCOCO_U
+            nombretabbio=T_MENINGOCOCO_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'MENINGOCOCO',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1075,98 +1075,98 @@ def infova(request, id, bio):
             }
 
         case "2001":
-            nombretabbio=MENINGOCOCO_1
+            nombretabbio=T_MENINGOCOCO_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "2002":
-            nombretabbio=MENINGOCOCO_2
+            nombretabbio=T_MENINGOCOCO_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "2003":
-            nombretabbio=MENINGOCOCO_3
+            nombretabbio=T_MENINGOCOCO_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "2004":
-            nombretabbio=MENINGOCOCO_4
+            nombretabbio=T_MENINGOCOCO_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "2005":
-            nombretabbio=MENINGOCOCO_5
+            nombretabbio=T_MENINGOCOCO_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "2006":
-            nombretabbio=MENINGOCOCO_R1
+            nombretabbio=T_MENINGOCOCO_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "2007":
-            nombretabbio=MENINGOCOCO_R2
+            nombretabbio=T_MENINGOCOCO_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "2008":
-            nombretabbio=MENINGOCOCO_R3
+            nombretabbio=T_MENINGOCOCO_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'MENINGOCOCO',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3000":
-            nombretabbio=TRIPLE_VIRAL_U
+            nombretabbio=T_TRIPLE_VIRAL_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'TRIPLE VIRAL',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1174,98 +1174,98 @@ def infova(request, id, bio):
             }
 
         case "3001":
-            nombretabbio=TRIPLE_VIRAL_1
+            nombretabbio=T_TRIPLE_VIRAL_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3002":
-            nombretabbio=TRIPLE_VIRAL_2
+            nombretabbio=T_TRIPLE_VIRAL_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3003":
-            nombretabbio=TRIPLE_VIRAL_3
+            nombretabbio=T_TRIPLE_VIRAL_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3004":
-            nombretabbio=TRIPLE_VIRAL_4
+            nombretabbio=T_TRIPLE_VIRAL_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3005":
-            nombretabbio=TRIPLE_VIRAL_5
+            nombretabbio=T_TRIPLE_VIRAL_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3006":
-            nombretabbio=TRIPLE_VIRAL_R1
+            nombretabbio=T_TRIPLE_VIRAL_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3007":
-            nombretabbio=TRIPLE_VIRAL_R2
+            nombretabbio=T_TRIPLE_VIRAL_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "3008":
-            nombretabbio=TRIPLE_VIRAL_R3
+            nombretabbio=T_TRIPLE_VIRAL_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TRIPLE VIRAL',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4000":
-            nombretabbio=VARICELA_U
+            nombretabbio=T_VARICELA_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'VARICELA',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1273,98 +1273,98 @@ def infova(request, id, bio):
             }
 
         case "4001":
-            nombretabbio=VARICELA_1
+            nombretabbio=T_VARICELA_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4002":
-            nombretabbio=VARICELA_2
+            nombretabbio=T_VARICELA_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4003":
-            nombretabbio=VARICELA_3
+            nombretabbio=T_VARICELA_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4004":
-            nombretabbio=VARICELA_4
+            nombretabbio=T_VARICELA_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4005":
-            nombretabbio=VARICELA_5
+            nombretabbio=T_VARICELA_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4006":
-            nombretabbio=VARICELA_R1
+            nombretabbio=T_VARICELA_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4007":
-            nombretabbio=VARICELA_R2
+            nombretabbio=T_VARICELA_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "4008":
-            nombretabbio=VARICELA_R3
+            nombretabbio=T_VARICELA_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VARICELA',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5000":
-            nombretabbio=HEPATITIS_A_U
+            nombretabbio=T_HEPATITIS_A_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'HEPATITIS A',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1372,98 +1372,98 @@ def infova(request, id, bio):
             }
 
         case "5001":
-            nombretabbio=HEPATITIS_A_1
+            nombretabbio=T_HEPATITIS_A_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5002":
-            nombretabbio=HEPATITIS_A_2
+            nombretabbio=T_HEPATITIS_A_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5003":
-            nombretabbio=HEPATITIS_A_3
+            nombretabbio=T_HEPATITIS_A_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5004":
-            nombretabbio=HEPATITIS_A_4
+            nombretabbio=T_HEPATITIS_A_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5005":
-            nombretabbio=HEPATITIS_A_5
+            nombretabbio=T_HEPATITIS_A_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5006":
-            nombretabbio=HEPATITIS_A_R1
+            nombretabbio=T_HEPATITIS_A_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5007":
-            nombretabbio=HEPATITIS_A_R2
+            nombretabbio=T_HEPATITIS_A_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "5008":
-            nombretabbio=HEPATITIS_A_R3
+            nombretabbio=T_HEPATITIS_A_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS A',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6000":
-            nombretabbio=FIEBRE_AMARILLA_U
+            nombretabbio=T_FIEBRE_AMARILLA_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'FIEBRE AMARILLA',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1471,98 +1471,98 @@ def infova(request, id, bio):
             }
 
         case "6001":
-            nombretabbio=FIEBRE_AMARILLA_1
+            nombretabbio=T_FIEBRE_AMARILLA_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6002":
-            nombretabbio=FIEBRE_AMARILLA_2
+            nombretabbio=T_FIEBRE_AMARILLA_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6003":
-            nombretabbio=FIEBRE_AMARILLA_3
+            nombretabbio=T_FIEBRE_AMARILLA_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6004":
-            nombretabbio=FIEBRE_AMARILLA_4
+            nombretabbio=T_FIEBRE_AMARILLA_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6005":
-            nombretabbio=FIEBRE_AMARILLA_5
+            nombretabbio=T_FIEBRE_AMARILLA_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6006":
-            nombretabbio=FIEBRE_AMARILLA_R1
+            nombretabbio=T_FIEBRE_AMARILLA_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6007":
-            nombretabbio=FIEBRE_AMARILLA_R2
+            nombretabbio=T_FIEBRE_AMARILLA_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "6008":
-            nombretabbio=FIEBRE_AMARILLA_R3
+            nombretabbio=T_FIEBRE_AMARILLA_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE AMARILLA',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7000":
-            nombretabbio=INFLUENZA_U
+            nombretabbio=T_INFLUENZA_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'INFLUENZA',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1570,98 +1570,98 @@ def infova(request, id, bio):
             }
 
         case "7001":
-            nombretabbio=INFLUENZA_1
+            nombretabbio=T_INFLUENZA_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7002":
-            nombretabbio=INFLUENZA_2
+            nombretabbio=T_INFLUENZA_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7003":
-            nombretabbio=INFLUENZA_3
+            nombretabbio=T_INFLUENZA_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7004":
-            nombretabbio=INFLUENZA_4
+            nombretabbio=T_INFLUENZA_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7005":
-            nombretabbio=INFLUENZA_5
+            nombretabbio=T_INFLUENZA_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7006":
-            nombretabbio=INFLUENZA_R1
+            nombretabbio=T_INFLUENZA_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7007":
-            nombretabbio=INFLUENZA_R2
+            nombretabbio=T_INFLUENZA_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "7008":
-            nombretabbio=INFLUENZA_R3
+            nombretabbio=T_INFLUENZA_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'INFLUENZA',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8000":
-            nombretabbio=COVID_U
+            nombretabbio=T_COVID_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'COVID',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1669,98 +1669,98 @@ def infova(request, id, bio):
             }
 
         case "8001":
-            nombretabbio=COVID_1
+            nombretabbio=T_COVID_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8002":
-            nombretabbio=COVID_2
+            nombretabbio=T_COVID_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8003":
-            nombretabbio=COVID_3
+            nombretabbio=T_COVID_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8004":
-            nombretabbio=COVID_4
+            nombretabbio=T_COVID_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8005":
-            nombretabbio=COVID_5
+            nombretabbio=T_COVID_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8006":
-            nombretabbio=COVID_R1
+            nombretabbio=T_COVID_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8007":
-            nombretabbio=COVID_R2
+            nombretabbio=T_COVID_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "8008":
-            nombretabbio=COVID_R3
+            nombretabbio=T_COVID_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'COVID',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9000":
-            nombretabbio=HERPES_ZOSTER_U
+            nombretabbio=T_HERPES_ZOSTER_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'HERPES ZOSTER',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1768,98 +1768,98 @@ def infova(request, id, bio):
             }
 
         case "9001":
-            nombretabbio=HERPES_ZOSTER_1
+            nombretabbio=T_HERPES_ZOSTER_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9002":
-            nombretabbio=HERPES_ZOSTER_2
+            nombretabbio=T_HERPES_ZOSTER_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9003":
-            nombretabbio=HERPES_ZOSTER_3
+            nombretabbio=T_HERPES_ZOSTER_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9004":
-            nombretabbio=HERPES_ZOSTER_4
+            nombretabbio=T_HERPES_ZOSTER_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9005":
-            nombretabbio=HERPES_ZOSTER_5
+            nombretabbio=T_HERPES_ZOSTER_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9006":
-            nombretabbio=HERPES_ZOSTER_R1
+            nombretabbio=T_HERPES_ZOSTER_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9007":
-            nombretabbio=HERPES_ZOSTER_R2
+            nombretabbio=T_HERPES_ZOSTER_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "9008":
-            nombretabbio=HERPES_ZOSTER_R3
+            nombretabbio=T_HERPES_ZOSTER_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HERPES ZOSTER',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10000":
-            nombretabbio=HEPATITIS_B_U
+            nombretabbio=T_HEPATITIS_B_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'HEPATITIS B',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1867,98 +1867,98 @@ def infova(request, id, bio):
             }
 
         case "10001":
-            nombretabbio=HEPATITIS_B_1
+            nombretabbio=T_HEPATITIS_B_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10002":
-            nombretabbio=HEPATITIS_B_2
+            nombretabbio=T_HEPATITIS_B_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10003":
-            nombretabbio=HEPATITIS_B_3
+            nombretabbio=T_HEPATITIS_B_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10004":
-            nombretabbio=HEPATITIS_B_4
+            nombretabbio=T_HEPATITIS_B_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10005":
-            nombretabbio=HEPATITIS_B_5
+            nombretabbio=T_HEPATITIS_B_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10006":
-            nombretabbio=HEPATITIS_B_R1
+            nombretabbio=T_HEPATITIS_B_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10007":
-            nombretabbio=HEPATITIS_B_R2
+            nombretabbio=T_HEPATITIS_B_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "10008":
-            nombretabbio=HEPATITIS_B_R3
+            nombretabbio=T_HEPATITIS_B_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HEPATITIS B',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "11000":
-            nombretabbio=ANTIRRABICA_U
+            nombretabbio=T_ANTIRRABICA_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'ANTIRRABICA',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -1966,97 +1966,97 @@ def infova(request, id, bio):
             }
 
         case "11001":
-            nombretabbio=ANTIRRABICA_1
+            nombretabbio=T_ANTIRRABICA_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "11002":
-            nombretabbio=ANTIRRABICA_2
+            nombretabbio=T_ANTIRRABICA_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "11003":
-            nombretabbio=ANTIRRABICA_3
+            nombretabbio=T_ANTIRRABICA_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
         case "11004":
-            nombretabbio=ANTIRRABICA_4
+            nombretabbio=T_ANTIRRABICA_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "11005":
-            nombretabbio=ANTIRRABICA_5
+            nombretabbio=T_ANTIRRABICA_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "11006":
-            nombretabbio=ANTIRRABICA_R1
+            nombretabbio=T_ANTIRRABICA_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "11007":
-            nombretabbio=ANTIRRABICA_R2
+            nombretabbio=T_ANTIRRABICA_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "11008":
-            nombretabbio=ANTIRRABICA_R3
+            nombretabbio=T_ANTIRRABICA_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'ANTIRRABICA',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12000":
-            nombretabbio=VPH_U
+            nombretabbio=T_VPH_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'VPH',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -2064,98 +2064,98 @@ def infova(request, id, bio):
             }
 
         case "12001":
-            nombretabbio=VPH_1
+            nombretabbio=T_VPH_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12002":
-            nombretabbio=VPH_2
+            nombretabbio=T_VPH_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12003":
-            nombretabbio=VPH_3
+            nombretabbio=T_VPH_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12004":
-            nombretabbio=VPH_4
+            nombretabbio=T_VPH_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12005":
-            nombretabbio=VPH_5
+            nombretabbio=T_VPH_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12006":
-            nombretabbio=VPH_R1
+            nombretabbio=T_VPH_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12007":
-            nombretabbio=VPH_R2
+            nombretabbio=T_VPH_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "12008":
-            nombretabbio=VPH_R3
+            nombretabbio=T_VPH_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'VPH',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13000":
-            nombretabbio=HA_HB_U
+            nombretabbio=T_HA_HB_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'HA+HB',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -2163,98 +2163,98 @@ def infova(request, id, bio):
             }
 
         case "13001":
-            nombretabbio=HA_HB_1
+            nombretabbio=T_HA_HB_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13002":
-            nombretabbio=HA_HB_2
+            nombretabbio=T_HA_HB_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13003":
-            nombretabbio=HA_HB_3
+            nombretabbio=T_HA_HB_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13004":
-            nombretabbio=HA_HB_4
+            nombretabbio=T_HA_HB_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13005":
-            nombretabbio=HA_HB_5
+            nombretabbio=T_HA_HB_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13006":
-            nombretabbio=HA_HB_R1
+            nombretabbio=T_HA_HB_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13007":
-            nombretabbio=HA_HB_R2
+            nombretabbio=T_HA_HB_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "13008":
-            nombretabbio=HA_HB_R3
+            nombretabbio=T_HA_HB_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'HA+HB',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14000":
-            nombretabbio=TETANO_ANTITETANICA_U
+            nombretabbio=T_TETANO_ANTITETANICA_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'TETANO ANTITETANICA',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -2262,98 +2262,98 @@ def infova(request, id, bio):
             }
 
         case "14001":
-            nombretabbio=TETANO_ANTITETANICA_1
+            nombretabbio=T_TETANO_ANTITETANICA_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14002":
-            nombretabbio=TETANO_ANTITETANICA_2
+            nombretabbio=T_TETANO_ANTITETANICA_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14003":
-            nombretabbio=TETANO_ANTITETANICA_3
+            nombretabbio=T_TETANO_ANTITETANICA_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14004":
-            nombretabbio=TETANO_ANTITETANICA_4
+            nombretabbio=T_TETANO_ANTITETANICA_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14005":
-            nombretabbio=TETANO_ANTITETANICA_5
+            nombretabbio=T_TETANO_ANTITETANICA_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14006":
-            nombretabbio=TETANO_ANTITETANICA_R1
+            nombretabbio=T_TETANO_ANTITETANICA_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14007":
-            nombretabbio=TETANO_ANTITETANICA_R2
+            nombretabbio=T_TETANO_ANTITETANICA_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "14008":
-            nombretabbio=TETANO_ANTITETANICA_R3
+            nombretabbio=T_TETANO_ANTITETANICA_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO ANTITETANICA',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15000":
-            nombretabbio=TETANO_DIFTERICO_U
+            nombretabbio=T_TETANO_DIFTERICO_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'TETANO DIFTERICO',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -2361,98 +2361,98 @@ def infova(request, id, bio):
             }
 
         case "15001":
-            nombretabbio=TETANO_DIFTERICO_1
+            nombretabbio=T_TETANO_DIFTERICO_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15002":
-            nombretabbio=TETANO_DIFTERICO_2
+            nombretabbio=T_TETANO_DIFTERICO_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15003":
-            nombretabbio=TETANO_DIFTERICO_3
+            nombretabbio=T_TETANO_DIFTERICO_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15004":
-            nombretabbio=TETANO_DIFTERICO_4
+            nombretabbio=T_TETANO_DIFTERICO_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15005":
-            nombretabbio=TETANO_DIFTERICO_5
+            nombretabbio=T_TETANO_DIFTERICO_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15006":
-            nombretabbio=TETANO_DIFTERICO_R1
+            nombretabbio=T_TETANO_DIFTERICO_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15007":
-            nombretabbio=TETANO_DIFTERICO_R2
+            nombretabbio=T_TETANO_DIFTERICO_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "15008":
-            nombretabbio=TETANO_DIFTERICO_R3
+            nombretabbio=T_TETANO_DIFTERICO_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'TETANO DIFTERICO',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16000":
-            nombretabbio=FIEBRE_TIFOIDEA_U
+            nombretabbio=T_FIEBRE_TIFOIDEA_U
 
             data={
-                'biologico':'Neumococo Conjugado',
+                'biologico':'FIEBRE TIFOIDEA',
                 'dosis':'Unica',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
@@ -2460,88 +2460,88 @@ def infova(request, id, bio):
             }
 
         case "16001":
-            nombretabbio=FIEBRE_TIFOIDEA_1
+            nombretabbio=T_FIEBRE_TIFOIDEA_1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'1ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16002":
-            nombretabbio=FIEBRE_TIFOIDEA_2
+            nombretabbio=T_FIEBRE_TIFOIDEA_2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'2da Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16003":
-            nombretabbio=FIEBRE_TIFOIDEA_3
+            nombretabbio=T_FIEBRE_TIFOIDEA_3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'3ra Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16004":
-            nombretabbio=FIEBRE_TIFOIDEA_4
+            nombretabbio=T_FIEBRE_TIFOIDEA_4
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'4ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16005":
-            nombretabbio=FIEBRE_TIFOIDEA_5
+            nombretabbio=T_FIEBRE_TIFOIDEA_5
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'5ta Dosis',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16006":
-            nombretabbio=FIEBRE_TIFOIDEA_R1
+            nombretabbio=T_FIEBRE_TIFOIDEA_R1
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'1er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16007":
-            nombretabbio=FIEBRE_TIFOIDEA_R2
+            nombretabbio=T_FIEBRE_TIFOIDEA_R2
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'2do Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
             }
 
         case "16008":
-            nombretabbio=FIEBRE_TIFOIDEA_R3
+            nombretabbio=T_FIEBRE_TIFOIDEA_R3
 
             data={
-                'biologico':'Neumococo Conjugado',
-                'dosis':'Unica',
+                'biologico':'FIEBRE TIFOIDEA',
+                'dosis':'3er Refuerzo',
                 'nombre': PacienteActual.nombre,
                 'apellido': PacienteActual.apellido,
                 'vacunador': request.user,
@@ -2549,7 +2549,7 @@ def infova(request, id, bio):
 
 
 
-
+    print(nombretabbio)
 
     print(nombretabbio.objects.filter(pk=id))
 

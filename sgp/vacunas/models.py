@@ -181,23 +181,23 @@ class Datoscomunvacun(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
-class DPT_ACELULAR_U(Datoscomunvacun): 
+class T_DPT_ACELULAR_U(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_1(Datoscomunvacun): 
+class T_DPT_ACELULAR_1(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_2(Datoscomunvacun): 
+class T_DPT_ACELULAR_2(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_3(Datoscomunvacun): 
+class T_DPT_ACELULAR_3(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_4(Datoscomunvacun): 
+class T_DPT_ACELULAR_4(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_5(Datoscomunvacun): 
+class T_DPT_ACELULAR_5(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_R1(Datoscomunvacun): 
+class T_DPT_ACELULAR_R1(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_R2(Datoscomunvacun): 
+class T_DPT_ACELULAR_R2(Datoscomunvacun): 
     pass
-class DPT_ACELULAR_R3(Datoscomunvacun): 
+class T_DPT_ACELULAR_R3(Datoscomunvacun): 
     pass
 
 class NEUMOCON(Datoscomunvacun):
@@ -219,290 +219,290 @@ class NEUMOCONR2(Datoscomunvacun):
 class NEUMOCONR3(Datoscomunvacun):
     pass
 
-class MENINGOCOCO_U(Datoscomunvacun):
+class T_MENINGOCOCO_U(Datoscomunvacun):
     pass
-class MENINGOCOCO_1(Datoscomunvacun):
+class T_MENINGOCOCO_1(Datoscomunvacun):
     pass
-class MENINGOCOCO_2(Datoscomunvacun):
+class T_MENINGOCOCO_2(Datoscomunvacun):
     pass
-class MENINGOCOCO_3(Datoscomunvacun):
+class T_MENINGOCOCO_3(Datoscomunvacun):
     pass
-class MENINGOCOCO_4(Datoscomunvacun):
+class T_MENINGOCOCO_4(Datoscomunvacun):
     pass
-class MENINGOCOCO_5(Datoscomunvacun):
+class T_MENINGOCOCO_5(Datoscomunvacun):
     pass
-class MENINGOCOCO_R1(Datoscomunvacun):
+class T_MENINGOCOCO_R1(Datoscomunvacun):
     pass
-class MENINGOCOCO_R2(Datoscomunvacun):
+class T_MENINGOCOCO_R2(Datoscomunvacun):
     pass
-class MENINGOCOCO_R3(Datoscomunvacun):
-    pass
-
-class TRIPLE_VIRAL_U(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_1(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_2(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_3(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_4(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_5(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_R1(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_R2(Datoscomunvacun):
-    pass
-class TRIPLE_VIRAL_R3(Datoscomunvacun):
+class T_MENINGOCOCO_R3(Datoscomunvacun):
     pass
 
-class VARICELA_U(Datoscomunvacun):
+class T_TRIPLE_VIRAL_U(Datoscomunvacun):
     pass
-class VARICELA_1(Datoscomunvacun):
+class T_TRIPLE_VIRAL_1(Datoscomunvacun):
     pass
-class VARICELA_2(Datoscomunvacun):
+class T_TRIPLE_VIRAL_2(Datoscomunvacun):
     pass
-class VARICELA_3(Datoscomunvacun):
+class T_TRIPLE_VIRAL_3(Datoscomunvacun):
     pass
-class VARICELA_4(Datoscomunvacun):
+class T_TRIPLE_VIRAL_4(Datoscomunvacun):
     pass
-class VARICELA_5(Datoscomunvacun):
+class T_TRIPLE_VIRAL_5(Datoscomunvacun):
     pass
-class VARICELA_R1(Datoscomunvacun):
+class T_TRIPLE_VIRAL_R1(Datoscomunvacun):
     pass
-class VARICELA_R2(Datoscomunvacun):
+class T_TRIPLE_VIRAL_R2(Datoscomunvacun):
     pass
-class VARICELA_R3(Datoscomunvacun):
-    pass
-
-class HEPATITIS_A_U(Datoscomunvacun):
-    pass
-class HEPATITIS_A_1(Datoscomunvacun):
-    pass
-class HEPATITIS_A_2(Datoscomunvacun):
-    pass
-class HEPATITIS_A_3(Datoscomunvacun):
-    pass
-class HEPATITIS_A_4(Datoscomunvacun):
-    pass
-class HEPATITIS_A_5(Datoscomunvacun):
-    pass
-class HEPATITIS_A_R1(Datoscomunvacun):
-    pass
-class HEPATITIS_A_R2(Datoscomunvacun):
-    pass
-class HEPATITIS_A_R3(Datoscomunvacun):
+class T_TRIPLE_VIRAL_R3(Datoscomunvacun):
     pass
 
-class FIEBRE_AMARILLA_U(Datoscomunvacun):
+class T_VARICELA_U(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_1(Datoscomunvacun):
+class T_VARICELA_1(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_2(Datoscomunvacun):
+class T_VARICELA_2(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_3(Datoscomunvacun):
+class T_VARICELA_3(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_4(Datoscomunvacun):
+class T_VARICELA_4(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_5(Datoscomunvacun):
+class T_VARICELA_5(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_R1(Datoscomunvacun):
+class T_VARICELA_R1(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_R2(Datoscomunvacun):
+class T_VARICELA_R2(Datoscomunvacun):
     pass
-class FIEBRE_AMARILLA_R3(Datoscomunvacun):
-    pass
-
-class INFLUENZA_U(Datoscomunvacun):
-    pass
-class INFLUENZA_1(Datoscomunvacun):
-    pass
-class INFLUENZA_2(Datoscomunvacun):
-    pass
-class INFLUENZA_3(Datoscomunvacun):
-    pass
-class INFLUENZA_4(Datoscomunvacun):
-    pass
-class INFLUENZA_5(Datoscomunvacun):
-    pass
-class INFLUENZA_R1(Datoscomunvacun):
-    pass
-class INFLUENZA_R2(Datoscomunvacun):
-    pass
-class INFLUENZA_R3(Datoscomunvacun):
+class T_VARICELA_R3(Datoscomunvacun):
     pass
 
-class COVID_U(Datoscomunvacun):
+class T_HEPATITIS_A_U(Datoscomunvacun):
     pass
-class COVID_1(Datoscomunvacun):
+class T_HEPATITIS_A_1(Datoscomunvacun):
     pass
-class COVID_2(Datoscomunvacun):
+class T_HEPATITIS_A_2(Datoscomunvacun):
     pass
-class COVID_3(Datoscomunvacun):
+class T_HEPATITIS_A_3(Datoscomunvacun):
     pass
-class COVID_4(Datoscomunvacun):
+class T_HEPATITIS_A_4(Datoscomunvacun):
     pass
-class COVID_5(Datoscomunvacun):
+class T_HEPATITIS_A_5(Datoscomunvacun):
     pass
-class COVID_R1(Datoscomunvacun):
+class T_HEPATITIS_A_R1(Datoscomunvacun):
     pass
-class COVID_R2(Datoscomunvacun):
+class T_HEPATITIS_A_R2(Datoscomunvacun):
     pass
-class COVID_R3(Datoscomunvacun):
-    pass
-
-class HERPES_ZOSTER_U(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_1(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_2(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_3(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_4(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_5(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_R1(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_R2(Datoscomunvacun):
-    pass
-class HERPES_ZOSTER_R3(Datoscomunvacun):
+class T_HEPATITIS_A_R3(Datoscomunvacun):
     pass
 
-class HEPATITIS_B_U(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_U(Datoscomunvacun):
     pass
-class HEPATITIS_B_1(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_1(Datoscomunvacun):
     pass
-class HEPATITIS_B_2(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_2(Datoscomunvacun):
     pass
-class HEPATITIS_B_3(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_3(Datoscomunvacun):
     pass
-class HEPATITIS_B_4(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_4(Datoscomunvacun):
     pass
-class HEPATITIS_B_5(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_5(Datoscomunvacun):
     pass
-class HEPATITIS_B_R1(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_R1(Datoscomunvacun):
     pass
-class HEPATITIS_B_R2(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_R2(Datoscomunvacun):
     pass
-class HEPATITIS_B_R3(Datoscomunvacun):
-    pass
-
-class ANTIRRABICA_U(Datoscomunvacun):
-    pass
-class ANTIRRABICA_1(Datoscomunvacun):
-    pass
-class ANTIRRABICA_2(Datoscomunvacun):
-    pass
-class ANTIRRABICA_3(Datoscomunvacun):
-    pass
-class ANTIRRABICA_4(Datoscomunvacun):
-    pass
-class ANTIRRABICA_5(Datoscomunvacun):
-    pass
-class ANTIRRABICA_R1(Datoscomunvacun):
-    pass
-class ANTIRRABICA_R2(Datoscomunvacun):
-    pass
-class ANTIRRABICA_R3(Datoscomunvacun):
+class T_FIEBRE_AMARILLA_R3(Datoscomunvacun):
     pass
 
-class VPH_U(Datoscomunvacun):
+class T_INFLUENZA_U(Datoscomunvacun):
     pass
-class VPH_1(Datoscomunvacun):
+class T_INFLUENZA_1(Datoscomunvacun):
     pass
-class VPH_2(Datoscomunvacun):
+class T_INFLUENZA_2(Datoscomunvacun):
     pass
-class VPH_3(Datoscomunvacun):
+class T_INFLUENZA_3(Datoscomunvacun):
     pass
-class VPH_4(Datoscomunvacun):
+class T_INFLUENZA_4(Datoscomunvacun):
     pass
-class VPH_5(Datoscomunvacun):
+class T_INFLUENZA_5(Datoscomunvacun):
     pass
-class VPH_R1(Datoscomunvacun):
+class T_INFLUENZA_R1(Datoscomunvacun):
     pass
-class VPH_R2(Datoscomunvacun):
+class T_INFLUENZA_R2(Datoscomunvacun):
     pass
-class VPH_R3(Datoscomunvacun):
-    pass
-
-class HA_HB_U(Datoscomunvacun):
-    pass
-class HA_HB_1(Datoscomunvacun):
-    pass
-class HA_HB_2(Datoscomunvacun):
-    pass
-class HA_HB_3(Datoscomunvacun):
-    pass
-class HA_HB_4(Datoscomunvacun):
-    pass
-class HA_HB_5(Datoscomunvacun):
-    pass
-class HA_HB_R1(Datoscomunvacun):
-    pass
-class HA_HB_R2(Datoscomunvacun):
-    pass
-class HA_HB_R3(Datoscomunvacun):
+class T_INFLUENZA_R3(Datoscomunvacun):
     pass
 
-class TETANO_ANTITETANICA_U(Datoscomunvacun):
+class T_COVID_U(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_1(Datoscomunvacun):
+class T_COVID_1(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_2(Datoscomunvacun):
+class T_COVID_2(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_3(Datoscomunvacun):
+class T_COVID_3(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_4(Datoscomunvacun):
+class T_COVID_4(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_5(Datoscomunvacun):
+class T_COVID_5(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_R1(Datoscomunvacun):
+class T_COVID_R1(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_R2(Datoscomunvacun):
+class T_COVID_R2(Datoscomunvacun):
     pass
-class TETANO_ANTITETANICA_R3(Datoscomunvacun):
+class T_COVID_R3(Datoscomunvacun):
+    pass
+
+class T_HERPES_ZOSTER_U(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_1(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_2(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_3(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_4(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_5(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_R1(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_R2(Datoscomunvacun):
+    pass
+class T_HERPES_ZOSTER_R3(Datoscomunvacun):
+    pass
+
+class T_HEPATITIS_B_U(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_1(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_2(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_3(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_4(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_5(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_R1(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_R2(Datoscomunvacun):
+    pass
+class T_HEPATITIS_B_R3(Datoscomunvacun):
+    pass
+
+class T_ANTIRRABICA_U(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_1(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_2(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_3(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_4(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_5(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_R1(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_R2(Datoscomunvacun):
+    pass
+class T_ANTIRRABICA_R3(Datoscomunvacun):
+    pass
+
+class T_VPH_U(Datoscomunvacun):
+    pass
+class T_VPH_1(Datoscomunvacun):
+    pass
+class T_VPH_2(Datoscomunvacun):
+    pass
+class T_VPH_3(Datoscomunvacun):
+    pass
+class T_VPH_4(Datoscomunvacun):
+    pass
+class T_VPH_5(Datoscomunvacun):
+    pass
+class T_VPH_R1(Datoscomunvacun):
+    pass
+class T_VPH_R2(Datoscomunvacun):
+    pass
+class T_VPH_R3(Datoscomunvacun):
+    pass
+
+class T_HA_HB_U(Datoscomunvacun):
+    pass
+class T_HA_HB_1(Datoscomunvacun):
+    pass
+class T_HA_HB_2(Datoscomunvacun):
+    pass
+class T_HA_HB_3(Datoscomunvacun):
+    pass
+class T_HA_HB_4(Datoscomunvacun):
+    pass
+class T_HA_HB_5(Datoscomunvacun):
+    pass
+class T_HA_HB_R1(Datoscomunvacun):
+    pass
+class T_HA_HB_R2(Datoscomunvacun):
+    pass
+class T_HA_HB_R3(Datoscomunvacun):
+    pass
+
+class T_TETANO_ANTITETANICA_U(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_1(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_2(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_3(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_4(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_5(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_R1(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_R2(Datoscomunvacun):
+    pass
+class T_TETANO_ANTITETANICA_R3(Datoscomunvacun):
     pass
 
 
-class TETANO_DIFTERICO_U(Datoscomunvacun):
+class T_TETANO_DIFTERICO_U(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_1(Datoscomunvacun):
+class T_TETANO_DIFTERICO_1(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_2(Datoscomunvacun):
+class T_TETANO_DIFTERICO_2(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_3(Datoscomunvacun):
+class T_TETANO_DIFTERICO_3(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_4(Datoscomunvacun):
+class T_TETANO_DIFTERICO_4(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_5(Datoscomunvacun):
+class T_TETANO_DIFTERICO_5(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_R1(Datoscomunvacun):
+class T_TETANO_DIFTERICO_R1(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_R2(Datoscomunvacun):
+class T_TETANO_DIFTERICO_R2(Datoscomunvacun):
     pass
-class TETANO_DIFTERICO_R3(Datoscomunvacun):
+class T_TETANO_DIFTERICO_R3(Datoscomunvacun):
     pass
 
-class FIEBRE_TIFOIDEA_U(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_U(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_1(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_1(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_2(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_2(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_3(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_3(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_4(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_4(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_5(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_5(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_R1(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_R1(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_R2(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_R2(Datoscomunvacun):
     pass
-class FIEBRE_TIFOIDEA_R3(Datoscomunvacun):
+class T_FIEBRE_TIFOIDEA_R3(Datoscomunvacun):
     pass
 
 

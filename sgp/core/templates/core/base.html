@@ -41,7 +41,7 @@
                     <li class="nav-item dropdown mr-3" >
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-user text-white"></i>&nbsp;
-                            @{{ user.first_name }} {{ user.last_name}}
+                            {{user.username}}
                         </a>
                         <div class="dropdown-menu">
                             <a href="{% url 'logout' %}" class="dropdown-item">

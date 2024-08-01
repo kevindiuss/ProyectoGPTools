@@ -166,7 +166,7 @@ class VacunasPacientes(models.Model):
 
 
 class Datoscomunvacun(models.Model):
-    PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True)
+    PACIENTE=models.ForeignKey(Paciente, on_delete=models.CASCADE,primary_key=True, unique=False)
     LABORATORIO=models.CharField(max_length=25, verbose_name='labo')
     LOTE=models.CharField(max_length=20, verbose_name='lote')
     FECHAVENVACU=models.DateTimeField(verbose_name='fechavenvacun')    
@@ -180,6 +180,9 @@ class Datoscomunvacun(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
 
 class T_DPT_ACELULAR_U(Datoscomunvacun): 
     pass

@@ -821,7 +821,7 @@ def infova(request, id, bio):
             formulario.instance.PACIENTE = get_object_or_404(Paciente, id=id)
             nombreusuario=str(request.user)
             formulario.instance.NOMBREVACUNADOR=nombreusuario
-
+            print(formulario.instance.PACIENTE)
             formulario.save()
   
             # Marca la vacuna como aplicada en esquema

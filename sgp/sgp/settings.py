@@ -72,6 +72,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'sgp.urls'
 
 TEMPLATES = [
+
+
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
